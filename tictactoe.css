@@ -312,11 +312,11 @@ input::placeholder {
 }
 
 .playerone.active-player {
-    background: green;
+    background: orange;
 }
 
 .playertwo.active-player {
-    background: red;
+    background: rebeccapurple;
 }
 
 .setting-cell {
