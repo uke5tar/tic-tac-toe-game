@@ -308,8 +308,15 @@ input::placeholder {
 }
 
 .active-player {
-    background: green;
     color: white;
+}
+
+.playerone.active-player {
+    background: green;
+}
+
+.playertwo.active-player {
+    background: red;
 }
 
 .setting-cell {
