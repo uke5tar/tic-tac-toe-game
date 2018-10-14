@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Tic Tac Toe Game</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="tictactoe.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+</head>
+<body>
+    <div class="body-wrapper grid-container">
+        <header><h1>Tic Tac Toe Game</h1></header>
+        <main>
+            <article class="game-wrapper grid-container">
+                <div class="scoreboard-wrapper grid-container">
+                    <div class="grid-container" id="scoreboard">
+                        <div class="title">Scoreboard</div>
+                        <div class="playerone name">Player 1</div>
+                        <div class="playertwo name">Player 2</div>
+                        <div class="playerone score">0</div>
+                        <div class="playertwo score">0</div>
+                    </div>
+                </div>
+                <section class="game-layer grid-container intro" id="welcome">
+                    <div class="header">
+                        <h2 class="title">Welcome</h2>
+                        <div class="message">How many players are going to play?</div>
+                    </div>
+                    <div class="content">
+                        <button type="button" value="1">1 Player</button>
+                        <button type="button" value="2">2 Player</button>
+                    </div>
+                </section>
+                <section class="game-layer grid-container intro" id="input-name">
+                    <form name="playernames" onsubmit="return false">
+                        <div id="oneplayer">
+                            <label>Player 1</label>
+                            <input type="text" name="playerone" id="nameone" placeholder="Type in your name..." required />
+                        </div>
+                        <div id="twoplayer">
+                            <label>Player 2</label>
+                            <input type="text" name="playertwo" id="nametwo" placeholder="Type in your name..." required />
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <audio style="display: none" id="sound-fight" preload src="http://freesound.org/data/previews/276/276254_5299216-lq.mp3"></audio>
+                    <audio style="display: none" id="sound-three" preload src="http://freesound.org/data/previews/169/169203_1587259-lq.mp3"></audio>
+                    <audio style="display: none" id="sound-two" preload src="http://freesound.org/data/previews/169/169196_1587259-lq.mp3"></audio>
+                    <audio style="display: none" id="sound-one" preload src="http://freesound.org/data/previews/169/169198_1587259-lq.mp3"></audio>
+                </section>
+                <section class="game-layer grid-container intro" id="choose-symbol">
+                    <div class="header">
+                        <h2 class="title"></h2>
+                    </div>
+                    <div class="content">
+                        <button type="button" value="x">X</button>
+                        <button type="button" value="o">O</button>
+                    </div>
+                </section>
+                <section class="game-layer grid-container" id="game-table">
+                    <div class="game-cell" data-cell = "1"><span></span></div>
+                    <div class="game-cell" data-cell = "2"><span></span></div>
+                    <div class="game-cell" data-cell = "3"><span></span></div>
+                    <div class="game-cell" data-cell = "4"><span></span></div>
+                    <div class="game-cell" data-cell = "5"><span></span></div>
+                    <div class="game-cell" data-cell = "6"><span></span></div>
+                    <div class="game-cell" data-cell = "7"><span></span></div>
+                    <div class="game-cell" data-cell = "8"><span></span></div>
+                    <div class="game-cell" data-cell = "9"><span></span></div>
+                </section>
+                <section class="game-layer grid-container" id="winner">
+                   <div class="declare-winner"></div>
+                   <div class="random-text"></div>
+                   <button>Retry</button>
+                </section>
+                <section class="game-layer grid-container" id="draw">
+                    <div class="draw-title">A Draw</div>
+                    <div class="random-text"></div>
+                    <button>Retry</button>
+                </section>
+            </article>
+        </main>
+        <div id="countdown"></div>
+    </div>
+
+    <!-- custom Javascript -->
+    <script src="tictactoe.js"></script>
+
+</body>
+</html>
